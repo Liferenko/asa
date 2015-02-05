@@ -1,13 +1,14 @@
 var nodemailer = require('nodemailer');
 
 // create reusable transporter object using SMTP transport
-var transporter = nodemailer.createTransport({
-    service: 'Gmail',
+var transport = nodemailer.createTransport(smtpTransport({
+    host: 'smtp.mandrillapp.com',
+    port: 587,
     auth: {
         user: 'paveldenysov@gmail.com',
-        pass: '10millionov'
+        pass: 'VsNRE1c5hOgKZRGxkYusqQ'
     }
-});
+}));
 
 // NB! No need to recreate the transporter object. You can use
 // the same transporter object for all e-mails
