@@ -6,7 +6,7 @@ var transporter = nodemailer.createTransport({
     service: 'Mandrill',
     auth: {
         user: 'paveldenysov@gmail.com',
-        pass: 'VsNRE1c5hOgKZRGxkYusqQ'
+        pass: 'VsNRE1c5hOgKZRGxkYusqQ';
     }
 }));
 
@@ -19,7 +19,7 @@ var mailOptions = {
     to: 'paveldenysov@gmail.com, eleven.krsk@gmail.com', // list of receivers
     subject: 'Hello ✔', // Subject line
     text: 'Hello world ✔', // plaintext body
-    html: 'Hello world ✔' // html body
+    html: 'Hello world ✔' // html body;
 };
 
 // send mail with defined transport object
