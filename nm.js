@@ -1,33 +1,10 @@
-var nodemailer = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
-
-// create reusable transporter object using SMTP transport
-var transport = nodemailer.createTransport(smtpTransport({
-    host: 'smtp.mandrillapp.com',
-    port: 587,
-    auth: {
-        user: 'paveldenysov@gmail.com',
-        pass: 'VsNRE1c5hOgKZRGxkYusqQ'
-    }
-}));
-
-// NB! No need to recreate the transporter object. You can use
-// the same transporter object for all e-mails
-
-// setup e-mail data with unicode symbols
-var mailOptions = {
-    from: 'Fred Foo ✔ <paveldenysov@gmail.com>', // sender address
-    to: 'paveldenysov@gmail.com, eleven.krsk@gmail.com', // list of receivers
-    subject: 'Hello ✔', // Subject line
-    text: 'Hello world ✔', // plaintext body
-    html: '<b>Hello world ✔</b>' // html body
-};
-
-// send mail with defined transport object
-transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        console.log(error);
-    }else{
-        console.log('Message sent: ' + info.response);
-    }
-});
+// using SendGrid's Node.js Library - https://github.com/sendgrid/sendgrid-nodejs
+var sendgrid = require("sendgrid")(api_user, api_key);
+var email = new sendgrid.Email();
+ 
+email.addTo("test@sendgrid.com");
+email.setFrom("you@youremail.com");
+email.setSubject("Sending with SendGrid is Fun");
+email.setHtml("and easy to do anywhere, even with Node.js");
+ 
+sendgrid.send(email);
