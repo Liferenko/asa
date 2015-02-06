@@ -5,8 +5,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'Mandrill',
     auth: {
-        user: 'paveldenysov@gmail.com',
-        pass: 'VsNRE1c5hOgKZRGxkYusqQ';
+        user: 'eleven.krsk@gmail.com',
+        pass: '2m6tATB3pEv6QVFvAzCGiA';
     }
 }));
 
