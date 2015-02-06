@@ -1,5 +1,5 @@
 var nodemailer = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
+
 
 // create reusable transporter object using SMTP transport
 var transporter = nodemailer.createTransport({
