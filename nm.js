@@ -2,9 +2,8 @@ var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 
 // create reusable transporter object using SMTP transport
-var transport = nodemailer.createTransport(smtpTransport({
-    host: 'smtp.mandrillapp.com',
-    port: 587,
+var transporter = nodemailer.createTransport({
+    service: 'Mandrill',
     auth: {
         user: 'paveldenysov@gmail.com',
         pass: 'VsNRE1c5hOgKZRGxkYusqQ'
