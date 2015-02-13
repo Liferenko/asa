@@ -3,19 +3,19 @@ var nodemailer = require('nodemailer');
 
 // create reusable transporter object using SMTP transport
 var transporter = nodemailer.createTransport({
-    service: 'Mandrill',
+    service: 'Gmail',
     auth: {
-        user: 'eleven.krsk@gmail.com',
-        pass: '2m6tATB3pEv6QVFvAzCGiA';
+        user: 'paveldenysov@gmail.com',
+        pass: '10millionov'
     }
-}));
+});
 
 // NB! No need to recreate the transporter object. You can use
 // the same transporter object for all e-mails
 
 // setup e-mail data with unicode symbols
 var mailOptions = {
-    from: 'Fred Foo ✔ <paveldenysov@gmail.com>', // sender address
+    from: '10millionov✔ <paveldenysov@gmail.com>', // sender address
     to: 'paveldenysov@gmail.com, eleven.krsk@gmail.com', // list of receivers
     subject: 'Hello ✔', // Subject line
     text: 'Hello world ✔', // plaintext body
