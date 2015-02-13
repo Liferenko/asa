@@ -19,7 +19,7 @@ var mailOptions = {
     to: 'paveldenysov@gmail.com, eleven.krsk@gmail.com', // list of receivers
     subject: 'Hello ✔', // Subject line
     text: 'Новый вариант ✔', // plaintext body
-    html: '<h1 style='font-size:70px;'>Новый вариант</h1> ✔' // html body;
+    html: '<h1>Новый вариант</h1> ✔' // html body;
 };
 
 // send mail with defined transport object
