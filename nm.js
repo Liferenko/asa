@@ -10,12 +10,16 @@ var transporter = nodemailer.createTransport({
     }
 });
 
+//for-100k-10millionov-com
+
+
+
 // NB! No need to recreate the transporter object. You can use
 // the same transporter object for all e-mails
 
 // setup e-mail data with unicode symbols
 var mailOptions = {
-    from: '10millionov✔ <paveldenysov@gmail.com>', // sender address
+    from: '10millionov✔ <eleven.krsk@gmail.com>', // sender address
     to: 'paveldenysov@gmail.com, eleven.krsk@gmail.com', // list of receivers
     subject: 'Hello ✔', // Subject line
     text: 'Новый вариант ✔', // plaintext body
