@@ -1,5 +1,4 @@
 var nodemailer = require('nodemailer');
-mandrill_client = new mandrill.Mandrill('2m6tATB3pEv6QVFvAzCGiA');
 var template_name = "for-100k-10millionov-com";
 var template_content = [{
         "name": "Main",
