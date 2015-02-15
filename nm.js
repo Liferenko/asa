@@ -1,10 +1,4 @@
 var nodemailer = require('nodemailer');
-var template_name = "for-100k-10millionov-com";
-var template_content = [{
-        "name": "Main",
-        "content": "Main"
-    }];
-
 
 
 // create reusable transporter object using SMTP transport
@@ -39,19 +33,4 @@ transporter.sendMail(mailOptions, function(error, info){
     }else{
         console.log('Message sent: ' + info.response);
     }
-});
-mandrill_client.messages.sendTemplate({"template_name": template_name, "template_content": template_content, "message": message, "async": async, "ip_pool": ip_pool, "send_at": send_at}, function(result) {
-    console.log(result);
-    /*
-    [{
-            "email": "recipient.email@example.com",
-            "status": "sent",
-            "reject_reason": "hard-bounce",
-            "_id": "abc123abc123abc123abc123abc123"
-        }]
-    */
-}, function(e) {
-    // Mandrill returns the error as an object with name and message keys
-    console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
-    // A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
 });
