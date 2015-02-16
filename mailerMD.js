@@ -13,7 +13,7 @@ var message = {
     "from_email": "10millionov@gmail.com",
     "from_name": "Активное Трудоустройство",
     "to": [{
-            "email": "eleven.krsk@gmail.com, doc.job@mail.ru",
+            "email": "paveldenysov@gmail.com",
             "name": "Pavel",
             "type": "to"
         }],
