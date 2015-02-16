@@ -1,3 +1,8 @@
+// Сейчас это тот скрипт, который смог таки прислать шаблон письма. 
+// С ним и стоит работать. Задача сейчас - сделать так, чтобы скрипт брал имейл
+// с текстового файла и отправлял на него письмо
+
+
 var mandrill = require('mandrill-api/mandrill');
 var mandrill_client = new mandrill.Mandrill('2m6tATB3pEv6QVFvAzCGiA');
 
@@ -9,7 +14,7 @@ var template_content = [{
 var message = {
     "html": "<p>Хачимэле</p>",
     "text": "Это текстулька",
-    "subject": "Тема письма",
+    "subject": "Как применять Активное Трудоустройство",
     "from_email": "10millionov@gmail.com",
     "from_name": "Активное Трудоустройство",
     "to": [{
