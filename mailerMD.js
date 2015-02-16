@@ -45,8 +45,7 @@ var message = {
 };
 var async = false;
 var ip_pool = "Main Pool";
-var send_at = "2014-02-12 01:01:01";
-mandrill_client.messages.sendTemplate({"template_name": template_name, "template_content": template_content, "message": message, "async": async, "ip_pool": ip_pool, "send_at": send_at}, function(result) {
+mandrill_client.messages.sendTemplate({"template_name": template_name, "template_content": template_content, "message": message, "async": async, "ip_pool": ip_pool,}, function(result) {
     console.log(result);
     /*
     [{
