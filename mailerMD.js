@@ -39,29 +39,13 @@ var message = {
             "name": "merge1",
             "content": "merge1 content"
         }],
-    "merge_vars": [{
-            "rcpt": "recipient.email@example.com",
-            "vars": [{
-                    "name": "merge2",
-                    "content": "merge2 content"
-                }]
-        }],
-    "tags": [
-        "password-resets"
-    ],
-    "subaccount": "customer-123",
-    "google_analytics_domains": [
-        "example.com"
-    ],
-    "google_analytics_campaign": "message.from_email@example.com",
-    "metadata": {
-        "website": "www.example.com"
-    },
+    
+   
     
 };
 var async = false;
 var ip_pool = "Main Pool";
-var send_at = "example send_at";
+var send_at = "2014-02-12 01:01:01";
 mandrill_client.messages.sendTemplate({"template_name": template_name, "template_content": template_content, "message": message, "async": async, "ip_pool": ip_pool, "send_at": send_at}, function(result) {
     console.log(result);
     /*
